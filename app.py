@@ -1,5 +1,5 @@
 from time import sleep
-from flask import Flask, stream_with_context, request, Response, flash, render_template, redirect, url_for
+from flask import Flask, stream_with_context, request, Response, flash, render_template, redirect, url_for, session
 
 from database import Database
 
@@ -38,6 +38,7 @@ def list_items():
         for 1 listing operation
     '''
     count = sum(1 for item in generate())  # count generator
+	session.pop('_flashes', None)
     flash("Loaded {} items from database".format(count))  # show message
 
     # stream with context helps us to return iterable as response
