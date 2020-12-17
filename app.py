@@ -38,7 +38,7 @@ def list_items():
         for 1 listing operation
     '''
     count = sum(1 for item in generate())  # count generator
-	session.pop('_flashes', None)
+    session.pop('_flashes', None)
     flash("Loaded {} items from database".format(count))  # show message
 
     # stream with context helps us to return iterable as response
