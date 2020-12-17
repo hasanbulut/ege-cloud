@@ -1,9 +1,9 @@
 {
     "database": {
-        "host": "<host>",
+        "host": "hbulutdb.postgres.database.azure.com",
         "dbname": "postgres",
-        "user": "<username>",
-        "password": "<password>",
+        "user": "hbulut@hbulutdb",
+        "password": "HB123.*blt",
         "ssl": "require"
     }
 }
